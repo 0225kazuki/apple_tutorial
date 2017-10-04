@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+import Firebase
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        FirebaseApp.configure()
+        
+        let ref = Database.database().reference()
+        ref.child("test3").child("test3-2").setValue("hoge")
+        ref.observe(.value, with: { snapshot in
+            print("\(snapshot.key) -> \(snapshot.value)")  // users  -> 111
+        })
+        
         return true
     }
 
