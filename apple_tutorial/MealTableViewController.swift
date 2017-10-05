@@ -20,9 +20,14 @@ class MealTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         
-        // Load the sample data
-        loadSampleMeals()
-
+        
+        if let savedMeals = loadMeals() {
+            meals += savedMeals
+        }
+        else {
+            // Load the sample data
+            loadSampleMeals()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,12 +46,18 @@ class MealTableViewController: UITableViewController {
                 tableView.reloadRows(at: [selectedIndexPath], with: .none)
             }
             else {
+                saveMeals()
+                
+                
                 // Add a new meal.
                 let newIndexPath = IndexPath(row: meals.count, section: 0)
                 
                 meals.append(meal)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            
+            // Save the meals
+            saveMeals()
             
         }
         
@@ -83,6 +94,7 @@ class MealTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: Private function
     private func loadSampleMeals() {
         let photo1 = UIImage(named: "meal1")
         let photo2 = UIImage(named: "meal2")
@@ -101,6 +113,19 @@ class MealTableViewController: UITableViewController {
         }
         
         meals += [meal1, meal2, meal3]
+    }
+    
+    private func saveMeals() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+        }
+    }
+    
+    private func loadMeals() -> [Meal]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.ArchiveURL.path) as? [Meal]
     }
     
     
@@ -157,7 +182,7 @@ class MealTableViewController: UITableViewController {
             }
             
             guard let selectedMealCell = sender as? MealTableViewCell else {
-                fatalError("Unexpected sender: \(sender)")
+                fatalError("Unexpected sender: \(String(describing: sender))")
             }
             
             guard let indexPath = tableView.indexPath(for: selectedMealCell) else {
@@ -167,7 +192,7 @@ class MealTableViewController: UITableViewController {
             let selectedMeal = meals[indexPath.row]
             mealDetailViewController.meal = selectedMeal
         default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
         }
     }
     
