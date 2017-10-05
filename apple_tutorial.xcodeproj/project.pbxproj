@@ -10,6 +10,7 @@
 		427606A9C94202704BDA13F9 /* Pods_apple_tutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8788324B35C5ABC65FAC8CF2 /* Pods_apple_tutorialUITests.framework */; };
 		992A896E86E7F250488EB563 /* Pods_apple_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71D89878F72AD35C6A6111E /* Pods_apple_tutorial.framework */; };
 		B7A8366837497FB2A8FB53F0 /* Pods_apple_tutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F9ABC534A33F32DA661949 /* Pods_apple_tutorialTests.framework */; };
+		D427142B1F863733004F9AAB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427142A1F863733004F9AAB /* AuthViewController.swift */; };
 		D42F5C2B1F827EE100041848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F5C2A1F827EE100041848 /* AppDelegate.swift */; };
 		D42F5C2D1F827EE100041848 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F5C2C1F827EE100041848 /* MealViewController.swift */; };
 		D42F5C301F827EE100041848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42F5C2E1F827EE100041848 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		A1E939BDE3EC8EA536071FFE /* Pods-apple_tutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple_tutorialUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apple_tutorialUITests/Pods-apple_tutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B96BCD6B22815E2864E8C235 /* Pods-apple_tutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple_tutorialUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apple_tutorialUITests/Pods-apple_tutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C9F9ABC534A33F32DA661949 /* Pods_apple_tutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apple_tutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D427142A1F863733004F9AAB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		D42F5C271F827EE100041848 /* apple_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apple_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42F5C2A1F827EE100041848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D42F5C2C1F827EE100041848 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				D42F5C5B1F83DBA100041848 /* RatingControl.swift */,
 				D42F5C5D1F84923800041848 /* Meal.swift */,
 				D42F5C2E1F827EE100041848 /* Main.storyboard */,
+				D427142A1F863733004F9AAB /* AuthViewController.swift */,
 				D42F5C631F84B26400041848 /* MealTableViewController.swift */,
 				D42F5C5F1F84AEF600041848 /* MealTableViewCell.swift */,
 				D42F5C341F827EE100041848 /* Assets.xcassets */,
@@ -489,6 +492,7 @@
 				D42F5C5C1F83DBA100041848 /* RatingControl.swift in Sources */,
 				D42F5C641F84B26400041848 /* MealTableViewController.swift in Sources */,
 				D42F5C601F84AEF600041848 /* MealTableViewCell.swift in Sources */,
+				D427142B1F863733004F9AAB /* AuthViewController.swift in Sources */,
 				D42F5C331F827EE100041848 /* apple_tutorial.xcdatamodeld in Sources */,
 				D42F5C2D1F827EE100041848 /* MealViewController.swift in Sources */,
 				D42F5C2B1F827EE100041848 /* AppDelegate.swift in Sources */,
