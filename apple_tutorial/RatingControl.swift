@@ -14,7 +14,6 @@ import Firebase
     //MARK: Properties
     private var ratingButtons = [UIButton]()
 
-
     var rating = 0 {
         didSet{
             updateButtonSelectionStates()

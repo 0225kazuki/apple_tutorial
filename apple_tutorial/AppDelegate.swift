@@ -23,11 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         FirebaseApp.configure()
         
-        let ref = Database.database().reference()
-        ref.child("test3").child("test3-2").setValue("hoge")
-        ref.observe(.value, with: { snapshot in
-            print("\(snapshot.key) -> \(snapshot.value)")  // users  -> 111
-        })
+//        print("First firebase process")
+//        let ref = Database.database().reference()
+//        ref.child("test3").child("test3-2").setValue("hoge")
+//        ref.observe(.value, with: { snapshot in
+//            print("\(snapshot.key) -> \(snapshot.value)")  // users  -> 111
+//        })
         
         return true
     }

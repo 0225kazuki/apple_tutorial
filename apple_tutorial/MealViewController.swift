@@ -26,16 +26,18 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     var meal: Meal?
     
     var ref: DatabaseReference!
-    fileprivate var _refHandle: DatabaseHandle?
+//    fileprivate var _refHandle: DatabaseHandle?
 //    ref = Database.database().reference()
+ 
     
     
     ///////////////// Firebase test
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("testestestetse")
+        print("_________firebase proessed___________")
+        ref = Database.database().reference()
         // 子ノード condition への参照
-        let conditionRef = ref.child("test")
+        let conditionRef = self.ref.child("test2")
         // クラウド上で、ノード condition に変更があった場合のコールバック処理
         conditionRef.observe(.value) { (snap: DataSnapshot) in
             print("ノードの値が変わりました！: \((snap.value as AnyObject).description)")
@@ -44,11 +46,12 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
 
     ///////////// Firebase test
     
-    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Handel the text files's user input through delegate callbacks.
         nameTextField.delegate = self
+        
         // Set up views if editing an existing Meal.
         if let meal = meal {
             navigationItem.title = meal.name
@@ -99,7 +102,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             return
         }
         
-
         let name = nameTextField.text ?? ""
         let photo = photoImageView.image
         let rating = ratingControl.rating
@@ -108,7 +110,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
 
 
-    
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
         let imagePickerController = UIImagePickerController()
