@@ -10,7 +10,10 @@
 		427606A9C94202704BDA13F9 /* Pods_apple_tutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8788324B35C5ABC65FAC8CF2 /* Pods_apple_tutorialUITests.framework */; };
 		992A896E86E7F250488EB563 /* Pods_apple_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E71D89878F72AD35C6A6111E /* Pods_apple_tutorial.framework */; };
 		B7A8366837497FB2A8FB53F0 /* Pods_apple_tutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F9ABC534A33F32DA661949 /* Pods_apple_tutorialTests.framework */; };
-		D427142B1F863733004F9AAB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427142A1F863733004F9AAB /* AuthViewController.swift */; };
+		D427142B1F863733004F9AAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427142A1F863733004F9AAB /* HomeViewController.swift */; };
+		D427142D1F864F7C004F9AAB /* testTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427142C1F864F7C004F9AAB /* testTableViewController.swift */; };
+		D427142F1F864F98004F9AAB /* testTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427142E1F864F98004F9AAB /* testTableViewCell.swift */; };
+		D42714311F864FF1004F9AAB /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42714301F864FF1004F9AAB /* Article.swift */; };
 		D42F5C2B1F827EE100041848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F5C2A1F827EE100041848 /* AppDelegate.swift */; };
 		D42F5C2D1F827EE100041848 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F5C2C1F827EE100041848 /* MealViewController.swift */; };
 		D42F5C301F827EE100041848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42F5C2E1F827EE100041848 /* Main.storyboard */; };
@@ -24,6 +27,8 @@
 		D42F5C601F84AEF600041848 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F5C5F1F84AEF600041848 /* MealTableViewCell.swift */; };
 		D42F5C641F84B26400041848 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42F5C631F84B26400041848 /* MealTableViewController.swift */; };
 		D42FD39D1F8517B7006D9913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D42FD39C1F8516D9006D9913 /* GoogleService-Info.plist */; };
+		D43FBEDC1F88BB31000935B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FBEDB1F88BB31000935B4 /* LoginViewController.swift */; };
+		D43FBEDE1F88D0AD000935B4 /* pushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43FBEDD1F88D0AD000935B4 /* pushViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +57,10 @@
 		A1E939BDE3EC8EA536071FFE /* Pods-apple_tutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple_tutorialUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-apple_tutorialUITests/Pods-apple_tutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B96BCD6B22815E2864E8C235 /* Pods-apple_tutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apple_tutorialUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-apple_tutorialUITests/Pods-apple_tutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C9F9ABC534A33F32DA661949 /* Pods_apple_tutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apple_tutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D427142A1F863733004F9AAB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		D427142A1F863733004F9AAB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D427142C1F864F7C004F9AAB /* testTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableViewController.swift; sourceTree = "<group>"; };
+		D427142E1F864F98004F9AAB /* testTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTableViewCell.swift; sourceTree = "<group>"; };
+		D42714301F864FF1004F9AAB /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		D42F5C271F827EE100041848 /* apple_tutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apple_tutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42F5C2A1F827EE100041848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D42F5C2C1F827EE100041848 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 		D42F5C631F84B26400041848 /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		D42FD39B1F8515DC006D9913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D42FD39C1F8516D9006D9913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D43FBEDB1F88BB31000935B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D43FBEDD1F88D0AD000935B4 /* pushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pushViewController.swift; sourceTree = "<group>"; };
 		E71D89878F72AD35C6A6111E /* Pods_apple_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_apple_tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,9 +168,14 @@
 				D42F5C5B1F83DBA100041848 /* RatingControl.swift */,
 				D42F5C5D1F84923800041848 /* Meal.swift */,
 				D42F5C2E1F827EE100041848 /* Main.storyboard */,
-				D427142A1F863733004F9AAB /* AuthViewController.swift */,
+				D43FBEDB1F88BB31000935B4 /* LoginViewController.swift */,
+				D427142A1F863733004F9AAB /* HomeViewController.swift */,
 				D42F5C631F84B26400041848 /* MealTableViewController.swift */,
 				D42F5C5F1F84AEF600041848 /* MealTableViewCell.swift */,
+				D43FBEDD1F88D0AD000935B4 /* pushViewController.swift */,
+				D427142C1F864F7C004F9AAB /* testTableViewController.swift */,
+				D427142E1F864F98004F9AAB /* testTableViewCell.swift */,
+				D42714301F864FF1004F9AAB /* Article.swift */,
 				D42F5C341F827EE100041848 /* Assets.xcassets */,
 				D42F5C361F827EE100041848 /* LaunchScreen.storyboard */,
 				D42F5C391F827EE100041848 /* Info.plist */,
@@ -488,14 +503,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43FBEDC1F88BB31000935B4 /* LoginViewController.swift in Sources */,
+				D42714311F864FF1004F9AAB /* Article.swift in Sources */,
 				D42F5C5E1F84923800041848 /* Meal.swift in Sources */,
 				D42F5C5C1F83DBA100041848 /* RatingControl.swift in Sources */,
 				D42F5C641F84B26400041848 /* MealTableViewController.swift in Sources */,
 				D42F5C601F84AEF600041848 /* MealTableViewCell.swift in Sources */,
-				D427142B1F863733004F9AAB /* AuthViewController.swift in Sources */,
+				D43FBEDE1F88D0AD000935B4 /* pushViewController.swift in Sources */,
+				D427142B1F863733004F9AAB /* HomeViewController.swift in Sources */,
 				D42F5C331F827EE100041848 /* apple_tutorial.xcdatamodeld in Sources */,
 				D42F5C2D1F827EE100041848 /* MealViewController.swift in Sources */,
+				D427142F1F864F98004F9AAB /* testTableViewCell.swift in Sources */,
 				D42F5C2B1F827EE100041848 /* AppDelegate.swift in Sources */,
+				D427142D1F864F7C004F9AAB /* testTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

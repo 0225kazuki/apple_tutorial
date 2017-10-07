@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import Firebase
 
 class MealTableViewController: UITableViewController {
     
@@ -20,7 +21,7 @@ class MealTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         
-        
+
         if let savedMeals = loadMeals() {
             meals += savedMeals
         }
@@ -28,6 +29,19 @@ class MealTableViewController: UITableViewController {
             // Load the sample data
             loadSampleMeals()
         }
+        
+
+        ///////////// Firebase test //////////////
+//        print("_________firebase proessed___________")
+//        ref = Database.database().reference()
+//        // 子ノード condition への参照
+//        let conditionRef = self.ref.child("article").child("0")
+//        print(conditionRef)
+//        // クラウド上で、ノード condition に変更があった場合のコールバック処理
+//        conditionRef.observe(.value) { (snap: DataSnapshot) in
+//            print("ノードの値が変わりました！: \((snap.value as AnyObject).description)")
+//        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +86,7 @@ class MealTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+
         return meals.count
     }
 

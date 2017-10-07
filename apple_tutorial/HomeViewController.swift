@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
-class AuthViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     // Propaties
     let BTN_IN = 0
@@ -18,7 +19,15 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
    
-    @IBOutlet weak var signIn: UIButton!
+//    @IBOutlet weak var signIn: UIButton!
+    
+    @IBAction func handleLogoutButton(_ sender: Any) {
+        try! Auth.auth().signOut()
+        
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+        self.present(loginViewController!, animated: true, completion: nil)
+        
+    }
     
     @IBOutlet weak var signUp: UIButton!
     
@@ -27,11 +36,22 @@ class AuthViewController: UIViewController {
         
         password.isSecureTextEntry = true
 
+        // Check isLogin
+        print(Auth.auth().currentUser)
+        if Auth.auth().currentUser == nil{
+            print("auth checked")
+            DispatchQueue.main.async {
+                let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+                self.present(loginViewController!, animated: true, completion: nil)
+            }
+        }
+        
+        
         // Do any additional setup after loading the view.
-        self.signIn.tag = BTN_IN
-        self.signUp.tag = BTN_UP
-        self.signIn.addTarget(self, action: #selector(AuthViewController.onClick(sender:)), for: .touchUpInside)
-        self.signUp.addTarget(self, action: #selector(AuthViewController.onClick(sender:)), for: .touchUpInside)
+//        self.signIn.tag = BTN_IN
+//        self.signUp.tag = BTN_UP
+//        self.signIn.addTarget(self, action: #selector(AuthViewController.onClick(sender:)), for: .touchUpInside)
+//        self.signUp.addTarget(self, action: #selector(AuthViewController.onClick(sender:)), for: .touchUpInside)
         
     }
 

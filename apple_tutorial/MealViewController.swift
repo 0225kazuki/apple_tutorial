@@ -25,7 +25,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     var meal: Meal?
     
-    var ref: DatabaseReference!
+//    var ref: DatabaseReference!
 //    fileprivate var _refHandle: DatabaseHandle?
 //    ref = Database.database().reference()
  
@@ -34,17 +34,18 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     ///////////////// Firebase test
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("_________firebase proessed___________")
-        ref = Database.database().reference()
-        // 子ノード condition への参照
-        let conditionRef = self.ref.child("test2")
-        // クラウド上で、ノード condition に変更があった場合のコールバック処理
-        conditionRef.observe(.value) { (snap: DataSnapshot) in
-            print("ノードの値が変わりました！: \((snap.value as AnyObject).description)")
-        }
+//        print("_________firebase proessed___________")
+//        ref = Database.database().reference()
+//        // 子ノード condition への参照
+//        let conditionRef = self.ref.child("article").child("0")
+//        print(conditionRef)
+//        // クラウド上で、ノード condition に変更があった場合のコールバック処理
+//        conditionRef.observe(.value) { (snap: DataSnapshot) in
+//            print("ノードの値が変わりました！: \((snap.value as AnyObject).description)")
+//        }
     }
 
-    ///////////// Firebase test
+    ///////////// Firebase test end
     
     
     override func viewDidLoad() {
